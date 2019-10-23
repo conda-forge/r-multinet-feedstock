@@ -1,4 +1,4 @@
-{% set version = '3.0.3' %}
+{% set version = "3.1.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/multinet_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/multinet/multinet_{{ version }}.tar.gz
-  sha256: b2cb162ecbff7de9662e36ecf68849fb4179842d671758ca069a17eb68c45fb5
+  sha256: bc3c02069221fd9dfc48db34c458556a19744b3dcbb97b18ad21747560987d6a
 
 build:
   skip: True  # [win]
