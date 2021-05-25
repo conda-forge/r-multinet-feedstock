@@ -50,7 +50,7 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=multinet
-  license: GPL
+  license: GPL-2.0-or-later
   summary: Functions for the creation/generation and analysis of multilayer social networks.
   license_family: GPL
   license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
