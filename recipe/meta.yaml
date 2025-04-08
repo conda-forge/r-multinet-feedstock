@@ -1,4 +1,4 @@
-{% set version = "4.2.1" %}
+{% set version = "4.2.2" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/multinet_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/multinet/multinet_{{ version }}.tar.gz
-  sha256: 72bd3b3c17dbaf694b41b1741542edca056566ea93b8ca96166b95a54af19d5b
+  sha256: 12133eed822b35a7dc60e21fcb4c7e2086acd86a111756611d238a7b6fca52ec
 
 build:
   # Checking windows to see if it passes. Uncomment the line if it fails.
