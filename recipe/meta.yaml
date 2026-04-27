@@ -12,12 +12,14 @@ source:
   sha256: 732128032fb9d2ef6b04d9577553eb08b5dbe7078a3681b1c4a53f0edb07039a
 
 build:
-  # Checking windows to see if it passes. Uncomment the line if it fails.
-  # skip: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -35,13 +37,13 @@ requirements:
   host:
     - r-base
     - r-rcolorbrewer
-    - r-rcpp >=1.0.1
-    - r-igraph >=1.0.1
+    - r-rcpp >=1.0
+    - r-igraph >=2.2.2
   run:
     - r-base
     - r-rcolorbrewer
-    - r-rcpp >=1.0.1
-    - r-igraph >=1.0.1
+    - r-rcpp >=1.0
+    - r-igraph >=2.2.2
 
 test:
   commands:
@@ -50,30 +52,13 @@ test:
 
 about:
   home: https://CRAN.R-project.org/package=multinet
-  license: GPL-2.0-or-later
-  summary: Functions for the creation/generation and analysis of multilayer social networks.
-  license_family: GPL
-  license_file: {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
+  license: Apache-2.0
+  summary: Functions for the creation/generation and analysis of multilayer social networks <doi:10.18637/jss.v098.i08>.
+  license_family: APACHE
+  license_file:
+    - LICENSE-2.0.txt
 
 extra:
   recipe-maintainers:
     - conda-forge/r
     - agcopenhaver
-
-# Package: multinet
-# Type: Package
-# Title: Analysis and Mining of Multilayer Social Networks
-# Version: 3.0.3
-# Date: 2019-07-13
-# Author: Matteo Magnani, Davide Vega, Mikael Dubik (glouvain). The package uses functions from eclat (www.borgelt.net/eclat.html), for association rule mining, Eigen (eigen.tuxfamily.org) and spectra (https://spectralib.org), for matrix manipulation, Infomap (www.mapequation.org), for the Infomap community detection method, and Howard Hinnant's date and time library (https://github.com/HowardHinnant/date). The code from this libraries has been included in our source package.
-# Maintainer: Matteo Magnani <matteo.magnani@it.uu.se>
-# Description: Functions for the creation/generation and analysis of multilayer social networks.
-# License: GPL
-# Depends: igraph (>= 1.0.1), Rcpp (>= 1.0.1), methods, RColorBrewer
-# LinkingTo: Rcpp
-# RcppModules: multinet
-# SystemRequirements: A C++14 compiler
-# NeedsCompilation: yes
-# Repository: CRAN
-# Packaged: 2019-07-13 21:42:18 UTC; matteomagnami
-# Date/Publication: 2019-07-13 22:40:05 UTC
