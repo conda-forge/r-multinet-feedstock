@@ -3,24 +3,11 @@ About r-multinet-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-multinet-feedstock/blob/main/LICENSE.txt)
 
-
-About r-multinet
-----------------
-
 Home: https://CRAN.R-project.org/package=multinet
 
-Package license: GPL-2.0-or-later
+Package license: Apache-2.0
 
-Summary: Functions for the creation/generation and analysis of multilayer social networks.
-
-About r-multinet
-----------------
-
-Home: https://CRAN.R-project.org/package=multinet
-
-Package license: GPL-2.0-or-later
-
-Summary: Functions for the creation/generation and analysis of multilayer social networks.
+Summary: Functions for the creation/generation and analysis of multilayer social networks <doi:10.18637/jss.v098.i08>.
 
 Current build status
 ====================
